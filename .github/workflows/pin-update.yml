@@ -4,7 +4,7 @@ on:
   schedule:
     - cron: "0 0 * * *" # Runs daily at midnight
   workflow_dispatch: # Allows manual execution
-
+  
 jobs:
   update-pins:
     runs-on: ubuntu-latest
