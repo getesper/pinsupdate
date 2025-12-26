@@ -1,3 +1,4 @@
+# Triggering workflow recognition
 name: Update Pinned Repositories
 
 on:
