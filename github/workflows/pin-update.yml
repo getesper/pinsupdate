@@ -1,0 +1,20 @@
+name: Update Pinned Repositories
+
+on:
+  schedule:
+    - cron: "0 0 * * *" # Runs daily at midnight
+  workflow_dispatch: # Allows manual execution
+
+jobs:
+  update-pins:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Update Pinned Repos
+        uses: readme/pin-recent-repos-action@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          num_repos: 6 # Adjust this value to pin a different number of repositories
